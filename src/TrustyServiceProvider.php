@@ -19,10 +19,10 @@ class TrustyServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/src/migrations/' => base_path('/database/migrations'),
-            __DIR__.'/src/config/config.php' => config_path('trusty.php'),
+            __DIR__.'/../migrations/' => base_path('/database/migrations'),
+            __DIR__.'/../config/config.php' => config_path('trusty.php'),
         ]);
-        $this->mergeConfigFrom(__DIR__.'/src/config/config.php', 'trusty');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'trusty');
     }
 
     /**
